@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:context=".view.client.MeasurementActivity">
+
+    <include layout="@layout/layout_toolbar"
+        android:id="@+id/toolbar"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:textSize="@dimen/textsize_20sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/std_padding"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:text="Measurement"/>
+
+    <LinearLayout
+        android:baselineAligned="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/std_padding"
+        android:paddingLeft="@dimen/std_padding"
+        android:id="@+id/tableContainer"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:layout_marginTop="@dimen/std_padding"
+        android:orientation="horizontal">
+
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="FL"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:id="@+id/etFL"
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:inputType="numberDecimal"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="DL"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etDL"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="BL"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:id="@+id/etBL"
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:inputType="numberDecimal"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="BP"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etBP"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="UBL"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etUBL"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="YL"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etYL"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="W"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etW"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="LW"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etLW"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="H"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etH"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Sh"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:ems="3"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etSh"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="A/H"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:ems="3"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etAH"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="XF"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etXF"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="XB"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etXB"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Bi"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etBi"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="SL1"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etSL1"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Cuf1"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etCuf1"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="SL2"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etSL2"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Cuf2"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etCuf2"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="NL"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:ems="3"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etNL"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="BKL"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etBKL"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="PL"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etPL"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="PW"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etPW"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="IL"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etIL"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="SL"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:id="@+id/etSL"
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:inputType="numberDecimal"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="SW"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etSW"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Th"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etTh"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Kn"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etKn"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:background="@drawable/row_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Bt"
+                    android:textSize="@dimen/textsize_16sp" />
+
+                <EditText
+                    android:layout_column="2"
+                    android:background="@drawable/row_bg"
+                    android:maxLength="8"
+                    android:padding="4dp"
+                    android:id="@+id/etBt"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/textsize_16sp" />
+
+            </TableRow>
+
+
+        </TableLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chContainer"
+        android:paddingLeft="@dimen/std_padding"
+        app:layout_constraintTop_toBottomOf="@id/tableContainer"
+        >
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_column="1"
+                android:background="@drawable/row_bg"
+                android:gravity="center"
+                android:paddingTop="4dp"
+                android:paddingLeft="9dp"
+                android:paddingRight="8.5dp"
+                android:paddingBottom="4dp"
+                android:text="Ch"
+                android:textSize="@dimen/textsize_16sp" />
+
+            <EditText
+                android:ems="5"
+                android:id="@+id/etCh"
+                android:layout_column="2"
+                android:background="@drawable/row_bg"
+                android:inputType="numberDecimal"
+                android:maxLength="10"
+                android:padding="4dp"
+                android:textSize="@dimen/textsize_16sp" />
+
+        </TableRow>
+    </TableLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSubmit"
+        android:layout_margin="@dimen/large_padding"
+        android:text="@string/str_submit"
+        android:background="@drawable/title_bg"
+        app:layout_constraintTop_toBottomOf="@+id/chContainer"/>
+
+</android.support.constraint.ConstraintLayout>

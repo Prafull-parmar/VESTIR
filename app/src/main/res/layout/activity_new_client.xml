@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".view.client.NewClientActivity">
+
+    <include layout="@layout/layout_toolbar"
+        android:id="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/std_padding"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/txt_new_order"
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/new_update_client"
+                android:textSize="@dimen/textsize_16sp"
+                android:textStyle="bold"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_marginTop="@dimen/std_padding"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@string/name"
+                    />
+
+                <AutoCompleteTextView
+                    android:id="@+id/etName"
+                    style="@style/editText_background"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:completionThreshold="1"
+                    android:inputType="textCapCharacters" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btnNewClient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/title_bg"
+                android:text="New Client"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/std_padding"
+                android:padding="8dp"/>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:id="@+id/containerFields"
+               android:visibility="gone"
+               android:orientation="vertical"
+               android:layout_marginTop="@dimen/large_padding"
+               >
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/txt_contact"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@string/contact"
+                    android:layout_gravity="center"
+                    />
+
+                <EditText
+                    android:id="@+id/etContact"
+                    style="@style/editText_background"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content"
+                    android:maxLength="10"
+                    android:inputType="number"
+                   />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_marginTop="@dimen/large_padding"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@string/address"
+                    android:layout_gravity="center"
+                    />
+
+                <EditText
+                    android:id="@+id/etAddress"
+                    style="@style/editText_background"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_marginTop="@dimen/large_padding"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@string/reference"
+                    android:layout_gravity="center"
+                    />
+
+                <EditText
+                    android:id="@+id/etReference"
+                    style="@style/editText_background"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/large_padding"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/measurements"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit_measurement"
+                    android:id="@+id/txtEditMeasurement"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:paddingRight="@dimen/small_padding"
+                    android:background="@drawable/title_bg"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/large_padding">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnActiveOrders"
+                    android:text="@string/active_norders"
+                    android:padding="@dimen/small_padding"
+                    android:enabled="false"
+                    android:background="@drawable/title_bg"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/double_extra_large"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnPastOrders"
+                    android:text="@string/past_norders"
+                    android:padding="@dimen/small_padding"
+                    android:enabled="false"
+                    android:background="@drawable/title_bg"/>
+
+            </LinearLayout>
+
+           </LinearLayout>
+
+        </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSubmit"
+        android:layout_marginTop="@dimen/large_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/title_bg"
+        android:padding="12dp"
+        android:visibility="gone"
+        android:layout_margin="@dimen/large_padding"
+        android:text="@string/submit"/>
+
+
+
+</android.support.constraint.ConstraintLayout>
