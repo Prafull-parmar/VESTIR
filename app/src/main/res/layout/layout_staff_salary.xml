@@ -120,14 +120,14 @@
                         android:id="@+id/txt_salary"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:paddingBottom="2dp"
-                        android:text="2000"
-                        android:singleLine="true"
-                        android:ellipsize="end"
-                        android:textColor="@android:color/black"
+                        android:layout_marginLeft="@dimen/small_padding"
                         android:background="@drawable/bg_texview_underline"
-                        android:textSize="@dimen/textsize_16sp"
-                        android:layout_marginLeft="@dimen/small_padding"/>
+                        android:ellipsize="end"
+                        android:paddingBottom="2dp"
+                        android:singleLine="true"
+                        android:text="2000"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textsize_16sp" />
                 </RelativeLayout>
             </LinearLayout>
 

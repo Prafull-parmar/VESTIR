@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import example.com.vestir.Profilepage
 import example.com.vestir.R
 import example.com.vestir.view.client.NewClientActivity
 import example.com.vestir.view.clientorder.OrderListByCustomerActivity
@@ -39,5 +40,10 @@ class DashboardActivity : AppCompatActivity() {
         titleTransaction.setOnClickListener {
             startActivity(Intent(this,TransactionActivity::class.java))
         }
+
+        profilepage.setOnClickListener {
+            startActivity(Intent(this,Profilepage::class.java))
+        }
+
     }
 }
